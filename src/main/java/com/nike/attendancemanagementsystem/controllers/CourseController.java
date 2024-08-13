@@ -31,14 +31,14 @@ public class CourseController {
     }
 
     // Get all courses
-    @GetMapping
+    @GetMapping("get-all-courses")
     public ResponseEntity<List<CourseResponse>> getAllCourses() {
         List<CourseResponse> responses = courseService.getAllCourses();
         return ResponseEntity.ok(responses);
     }
 
     // Update a course
-    @PutMapping("/{courseId}")
+    @PutMapping("/update-course/{courseId}")
     public ResponseEntity<CourseResponse> updateCourse(@PathVariable Long courseId, @RequestBody CourseRequest request) {
         CourseResponse response = courseService.updateCourse(courseId, request);
         return ResponseEntity.ok(response);

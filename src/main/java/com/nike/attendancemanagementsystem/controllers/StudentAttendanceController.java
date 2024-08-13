@@ -30,7 +30,7 @@ public class StudentAttendanceController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/get-all-attendance")
+    @GetMapping("/get-all-student-attendance")
     public ResponseEntity<List<StudentAttendanceResponse>> getAllAttendances() {
         List<StudentAttendanceResponse> responses = studentAttendanceService.getAllStudentAttendances();
         return ResponseEntity.ok(responses);
